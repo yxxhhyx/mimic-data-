@@ -18,7 +18,7 @@ con <- dbConnect(
 
 cancer <- dbGetQuery(con, "
 SELECT *
-FROM mimiciv_derived.all_patient_features_v4
+FROM mimiciv_derived.features_v5
 WHERE cancer_stage IN ('onset', 'post-cancer', 'pre-cancer');
 ")
 
