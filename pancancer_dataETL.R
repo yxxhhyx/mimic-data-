@@ -72,7 +72,7 @@ cancer_dig <- dbGetQuery(con, "
    AND d.icd_version = dd.icd_version
   WHERE d.hadm_id IN (
       SELECT hadm_id
-      FROM mimiciv_derived.all_patient_features_v2
+      FROM mimiciv_derived.all_patient_features_v4
       WHERE cancer_stage IN ('onset', 'post-cancer', 'pre-cancer')
   );
 ")
